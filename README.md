@@ -9,3 +9,8 @@ In marine engineering and naval architecture, accurately predicting hydrodynamic
 Objective
 
 Develop a deep neural network architecture to predict hydrodynamic forces on a parameterized family of submerged objects (e.g., ellipsoidal shapes representing simplified submarine hulls) under varying flow conditions. The model should be trained on a synthetically generated dataset consisting of at least 1 million samples to ensure robustness and generalization across a wide parameter space. The solution must emphasize efficiency in data generation, model training, and inference to make it practical for iterative design processes.
+
+
+Running Model
+
+For running the model just hit model_weights.py and it will save the weights and biasis of the model. Then one can predict the forces by reusing the trained model by running reload_model.py.

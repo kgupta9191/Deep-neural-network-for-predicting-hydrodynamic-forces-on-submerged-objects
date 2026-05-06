@@ -22,7 +22,7 @@ The current pipeline assumes:
 - **First 3 columns**: input features (geometry/flow parameters).
 - **Last 3 columns**: target force components.
 
-The script keeps samples where the last two target columns are within thresholds (`<= 1000` and `<= 100`) before training.
+The script keeps samples where the first two of the three target columns (columns `-3` and `-2`) are within thresholds (`<= 1000` and `<= 100`) before training.
 
 ## Model architecture
 The network is a multilayer perceptron (MLP) with the following structure:
@@ -55,7 +55,7 @@ The script saves the best model weights to `best_model.pth`.
 3. Normalize inputs in the same way as training (mean/std computed from the training data).
 4. Run the model to predict hydrodynamic forces.
 
-The provided `src/reload_model.py` is the starting point for loading weights; ensure the `MLP` class definition is available when running it.
+The provided `src/reload_model.py` is the starting point for loading weights; ensure the `MLP` class definition is available when running it (for example, `from src.model_weights import MLP` when executing from the repo root).
 
 ## Tests
 ```bash

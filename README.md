@@ -22,7 +22,7 @@ The current pipeline assumes:
 - **First 3 columns**: input features (geometry/flow parameters).
 - **Last 3 columns**: target force components.
 
-The script filters samples where the last two target columns exceed thresholds (`<= 1000` and `<= 100`) before training.
+The script keeps samples where the last two target columns are within thresholds (`<= 1000` and `<= 100`) before training.
 
 ## Model architecture
 The network is a multilayer perceptron (MLP) with the following structure:
@@ -31,7 +31,7 @@ The network is a multilayer perceptron (MLP) with the following structure:
 ```
 - Activation: ReLU between layers
 - Loss: Mean Squared Error (MSE)
-- Optimizer: Adam (lr = 1e-5)
+- Optimizer: Adam (lr = 1e-5, as configured in the training script)
 - Train/val/test split: 80/10/10
 - Early stopping based on validation loss (checked every 100 epochs)
 

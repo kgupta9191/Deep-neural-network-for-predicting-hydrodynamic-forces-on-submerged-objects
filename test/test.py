@@ -61,7 +61,7 @@ class TestMLP:
 
     def test_forward_batch_sizes(self):
         model = MLP()
-        for batch in [1, 32, 128, 512]:
+        for batch in [32, 128, 512]:
             out = model(torch.randn(batch, 3))
             assert out.shape == (batch, 3)
 

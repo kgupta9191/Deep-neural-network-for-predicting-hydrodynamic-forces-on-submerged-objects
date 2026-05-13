@@ -2,7 +2,9 @@
 
 > A PyTorch surrogate model that predicts drag, lift, and torque on parameterized submerged objects in milliseconds — trained on 1 M+ synthetic samples. A **pre-trained model checkpoint** (`best_model.pth`) is included in this repository and can be loaded directly to calculate forces without retraining.
 
-[![CI](https://github.com/kgupta9191/Deep-neural-network-for-predicting-hydrodynamic-forces-on-submerged-objects/actions/workflows/ci.yml/badge.svg)](https://github.com/kgupta9191/Deep-neural-network-for-predicting-hydrodynamic-forces-on-submerged-objects/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-latest-red)](https://pytorch.org/)
 
 ---
 
